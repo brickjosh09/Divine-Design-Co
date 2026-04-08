@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Luxury Neutral & Champagne Palette */
+  --color-cream: #FAF8F5;
+  --color-champagne: #C9A96E;
+  --color-champagne-light: #D4BC8B;
+  --color-champagne-dark: #A8893E;
+  --color-ivory: #F5F0EB;
+  --color-charcoal: #1C1C1C;
+  --color-warm-gray: #7A736E;
+  --color-light-gray: #F2EDE8;
+  --color-taupe: #B5ADA6;
+  --color-white: #FDFCFB;
+  --color-dark: #111111;
+  --color-soft-black: #2A2826;
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-jost);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), serif;
+}
+
+::selection {
+  background-color: var(--color-champagne);
+  color: var(--color-white);
+}

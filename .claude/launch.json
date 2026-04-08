@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "divine-design",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000,
+      "cwd": "C:\\Users\\brick\\OneDrive\\Desktop\\Claude Code Projects\\Divine Design\\divine-design-co"
+    }
+  ]
+}
