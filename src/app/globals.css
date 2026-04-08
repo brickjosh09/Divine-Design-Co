@@ -1,21 +1,20 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Luxury Neutral & Champagne Palette */
-  --color-cream: #FAF8F5;
-  --color-champagne: #C9A96E;
-  --color-champagne-light: #D4BC8B;
-  --color-champagne-dark: #A8893E;
-  --color-ivory: #F5F0EB;
-  --color-charcoal: #1C1C1C;
-  --color-warm-gray: #7A736E;
-  --color-light-gray: #F2EDE8;
-  --color-taupe: #B5ADA6;
-  --color-white: #FDFCFB;
-  --color-dark: #111111;
-  --color-soft-black: #2A2826;
+  /* BTS Bride inspired palette */
+  --color-blush-bg: #F8DFDB;
+  --color-coral: #F34742;
+  --color-sage: #7D8A5C;
+  --color-cream: #FFF9F8;
+  --color-white: #FFFFFF;
+  --color-dark: #1A1515;
+  --color-black: #000000;
+  --color-text: #3A3535;
+  --color-text-light: #6B6565;
+  --color-border: #E8D5D2;
+  --color-overlay: rgba(26, 21, 21, 0.45);
   --font-serif: var(--font-playfair);
-  --font-sans: var(--font-jost);
+  --font-sans: var(--font-inter);
 }
 
 html {
@@ -23,18 +22,30 @@ html {
 }
 
 body {
-  background: var(--color-white);
-  color: var(--color-charcoal);
+  background: var(--color-cream);
+  color: var(--color-text);
   font-family: var(--font-sans), sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif), serif;
+  font-weight: 300;
 }
 
 ::selection {
-  background-color: var(--color-champagne);
+  background-color: var(--color-coral);
   color: var(--color-white);
+}
+
+/* Scrolling text animation for footer */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
 }

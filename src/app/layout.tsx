@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Jost } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -8,8 +8,8 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const jost = Jost({
-  variable: "--font-jost",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
@@ -40,47 +40,23 @@ export const metadata: Metadata = {
   authors: [{ name: "Bailee", url: siteUrl }],
   creator: "Divine Design Co",
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
     siteName: "Divine Design Co",
     title: "Divine Design Co | MS Gulf Coast Wedding Photographer & Content Creator",
-    description:
-      "Capturing moments that reflect purpose, beauty, and the story He has written for you. Wedding photography, content creation, and portrait sessions on the MS Gulf Coast.",
-    images: [
-      {
-        url: `${siteUrl}/images/hero.jpg`,
-        width: 1500,
-        height: 1000,
-        alt: "Divine Design Co - MS Gulf Coast Wedding Photography",
-      },
-    ],
+    description: "Capturing moments that reflect purpose, beauty, and the story He has written for you.",
+    images: [{ url: `${siteUrl}/images/hero.jpg`, width: 1500, height: 1000, alt: "Divine Design Co" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Divine Design Co | MS Gulf Coast Wedding Photographer",
-    description:
-      "Timeless wedding photography and real-time content creation on the MS Gulf Coast.",
+    description: "Timeless wedding photography and real-time content creation on the MS Gulf Coast.",
     images: [`${siteUrl}/images/hero.jpg`],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    // google: "your-google-verification-code",
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -89,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${jost.variable} h-full antialiased`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
